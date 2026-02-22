@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Python
+python/venv/
+python/__pycache__/
+python/*.pyc
+*.py[cod]
+*$py.class
+
+# Large files (dataset et modèle ML - trop volumineux pour GitHub)
+python/bahria_rf_v1.joblib
+python/bahria_dataset_5000.csv
+python/bahria_dataset_export_*.csv
+*.zip
+
+# Exports datasets (disponibles en release)
+bahria_dataset_export.zip
+bahria_dataset_export_*.csv
