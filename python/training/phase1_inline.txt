@@ -1,0 +1,33 @@
+exec("""
+from ultralytics import YOLO
+import torch
+from ultralytics.nn.tasks import DetectionModel
+
+torch.serialization.add_safe_globals([DetectionModel])
+print("✅ Fix PyTorch 2.6 appliqué")
+
+model = YOLO('yolov8m.pt')
+print("📦 Modèle YOLOv8m chargé")
+
+BASE_DIR = "/content/drive/MyDrive/BAHRIA_Training"
+print(f"🔥 Démarrage entraînement Phase 1 (50 epochs)...")
+
+results = model.train(
+    data=f"{BASE_DIR}/bahria_dataset.yaml",
+    epochs=50,
+    imgsz=640,
+    batch=12,
+    patience=15,
+    save=True,
+    save_period=10,
+    device=0,
+    project=f"{BASE_DIR}/runs/phase1",
+    name='bahria_pretrain',
+    exist_ok=True,
+    resume=True,
+    plots=True,
+    verbose=True
+)
+
+print("✅ PHASE 1 terminée!")
+""")

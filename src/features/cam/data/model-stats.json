@@ -1,0 +1,140 @@
+{
+  "model_version": "BAHRIA-CAM-v1.2.1",
+  "last_updated": "2026-03-15",
+  "architecture": "YOLOv8-large + Instance Segmentation",
+  "hardware": "NVIDIA Jetson AGX Orin 64GB",
+  "inference_time_ms": 145,
+  "precision_globale": 94.3,
+  "images_entrainement": 12847,
+  "images_validation": 3211,
+  "images_test": 1604,
+  "epochs_trained": 250,
+  "precision_par_espece": {
+    "poulpe": {
+      "precision": 96.8,
+      "recall": 95.2,
+      "f1_score": 96.0,
+      "samples": 3845,
+      "confusion_matrix": {
+        "vrai_positif": 3659,
+        "faux_positif": 124,
+        "faux_negatif": 186
+      },
+      "erreurs_communes": [
+        "Confusion avec seiche dans captures mixtes (3.2%)",
+        "Difficulté avec poulpes très petits <8cm (2.8%)"
+      ]
+    },
+    "sardine": {
+      "precision": 98.3,
+      "recall": 97.8,
+      "f1_score": 98.0,
+      "samples": 5234,
+      "confusion_matrix": {
+        "vrai_positif": 5118,
+        "faux_positif": 88,
+        "faux_negatif": 116
+      },
+      "erreurs_communes": [
+        "Comptage imprécis sur bancs très denses (1.5%)",
+        "Confusion mineure avec anchois (0.7%)"
+      ]
+    },
+    "seiche": {
+      "precision": 97.1,
+      "recall": 96.4,
+      "f1_score": 96.7,
+      "samples": 2891,
+      "confusion_matrix": {
+        "vrai_positif": 2787,
+        "faux_positif": 84,
+        "faux_negatif": 104
+      },
+      "erreurs_communes": [
+        "Confusion avec poulpe dans mauvaises conditions lumière (2.9%)",
+        "Difficulté avec seiches juvéniles (1.5%)"
+      ]
+    },
+    "courbine": {
+      "precision": 92.7,
+      "recall": 91.3,
+      "f1_score": 92.0,
+      "samples": 877,
+      "confusion_matrix": {
+        "vrai_positif": 801,
+        "faux_positif": 63,
+        "faux_negatif": 76
+      },
+      "erreurs_communes": [
+        "Confusion avec autres poissons blancs (5.1%)",
+        "Échantillon d'entraînement plus petit (2.2%)"
+      ]
+    }
+  },
+  "performance_taille": {
+    "estimation_longueur": {
+      "erreur_moyenne_cm": 0.8,
+      "erreur_max_cm": 2.3,
+      "precision_pct": 94.7
+    },
+    "estimation_poids": {
+      "erreur_moyenne_g": 45,
+      "erreur_max_g": 180,
+      "precision_pct": 91.2
+    }
+  },
+  "performance_comptage": {
+    "individus_1_10": {
+      "precision": 98.5,
+      "erreur_moyenne": 0.2
+    },
+    "individus_11_50": {
+      "precision": 96.3,
+      "erreur_moyenne": 1.8
+    },
+    "individus_51_200": {
+      "precision": 92.7,
+      "erreur_moyenne": 8.4
+    },
+    "individus_200_plus": {
+      "precision": 88.1,
+      "erreur_moyenne": 24.6
+    }
+  },
+  "conditions_optimales": {
+    "luminosite_min_lux": 800,
+    "distance_optimale_cm": "30-80",
+    "angle_capture_deg": "45-90",
+    "resolution_min": "1920x1080"
+  },
+  "ameliorations_v1_2": [
+    "Amélioration détection juvéniles (+12% précision)",
+    "Meilleure gestion captures mixtes (+8%)",
+    "Réduction temps inférence de 185ms à 145ms",
+    "Nouveau dataset 2026 avec 3200 images Dakhla"
+  ],
+  "roadmap_v1_3": {
+    "date_prevue": "2026-06",
+    "ameliorations": [
+      "Support 8 espèces supplémentaires (maquereau, chinchard, pageot)",
+      "Estimation automatique fraîcheur par analyse texture",
+      "Détection défauts qualité (blessures, parasites)",
+      "Mode comptage temps réel vidéo (15 fps)"
+    ]
+  },
+  "donnees_collecte": {
+    "photos_terrain": 12847,
+    "zones_couvertes": ["Dakhla", "Lassarga", "Labouirda", "Ntirifet", "Imoutlane"],
+    "periode": "2024-01 à 2026-03",
+    "contributeurs": [
+      "Flotte artisanale Dakhla (23 navires)",
+      "Usine BAHRIA (photos tri)",
+      "INRH Dakhla (validation scientifique)"
+    ],
+    "annotation": {
+      "outils": ["CVAT", "LabelImg", "RoboFlow"],
+      "annotateurs": 5,
+      "temps_total_heures": 847
+    }
+  }
+}

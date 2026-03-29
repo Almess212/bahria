@@ -1,0 +1,221 @@
+{
+  "poulpe": {
+    "2026": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "30 juin",
+        "duree_jours": 91,
+        "raison": "Période prévisionnelle - À confirmer par l'INRH"
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "31 déc",
+        "duree_jours": 107,
+        "raison": "3.5 mois de repos avant campagne hivernale 2027"
+      },
+      "campagne_hiver": {
+        "date_debut": "01 jan",
+        "date_fin": "31 mar",
+        "quota_sud_sidi_ghazi_T": 32940,
+        "quota_boujdour_T": 3660
+      }
+    },
+    "2025": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "14 jul",
+        "duree_jours": 105,
+        "raison": "Prolongation exceptionnelle - Taux juvéniles 43% - Prolongé jusqu'au 14 juillet"
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "15 déc",
+        "duree_jours": 91
+      },
+      "campagne_hiver": {
+        "date_debut": "01 jan",
+        "date_fin": "31 mar",
+        "chiffre_affaires_MDH": 644,
+        "variation_pct": 10.77
+      },
+      "campagne_ete": {
+        "date_debut": "15 jul",
+        "date_fin": "15 sep",
+        "raison": "Ouverture 15 juillet avec indicateurs positifs et prix stables"
+      }
+    },
+    "2024": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "14 jul",
+        "duree_jours": 105
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "15 déc",
+        "duree_jours": 91
+      },
+      "campagne_hiver": {
+        "date_debut": "01 jan",
+        "date_fin": "31 mar"
+      },
+      "campagne_ete": {
+        "date_debut": "15 jul",
+        "date_fin": "15 sep"
+      }
+    },
+    "2023": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "14 jul",
+        "duree_jours": 105
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "15 déc",
+        "duree_jours": 91
+      },
+      "campagne_hiver": {
+        "date_debut": "01 jan",
+        "date_fin": "31 mar"
+      },
+      "campagne_ete": {
+        "date_debut": "15 jul",
+        "date_fin": "15 sep"
+      }
+    }
+  },
+  "sardine": {
+    "2026": {
+      "repos_hivernal": {
+        "date_debut": "01 jan",
+        "date_fin": "15 fév",
+        "duree_jours": 46,
+        "zone": "Côte Agadir"
+      },
+      "repos_hivernal_sud": {
+        "date_debut": "01 jan",
+        "date_fin": "28 fév",
+        "duree_jours": 59,
+        "zone": "Boujdour à Dakhla - Atlantique Sud",
+        "raison": "Mesure renforcée - 75 senneurs autorisés à Dakhla"
+      }
+    },
+    "2025": {
+      "repos_hivernal": {
+        "date_debut": "01 jan",
+        "date_fin": "15 fév",
+        "duree_jours": 46,
+        "zone": "Cap Boujdour au Cap Blanc"
+      }
+    },
+    "2024": {
+      "repos_hivernal": {
+        "date_debut": "01 jan",
+        "date_fin": "15 fév",
+        "duree_jours": 46,
+        "zone": "Cap Boujdour au Cap Blanc"
+      }
+    },
+    "2023": {
+      "repos_hivernal": {
+        "date_debut": "01 jan",
+        "date_fin": "15 fév",
+        "duree_jours": 46,
+        "zone": "Cap Boujdour au Cap Blanc"
+      }
+    },
+    "zone_interdite_permanente": {
+      "latitude": "24°N-25°N",
+      "distance": "20 milles"
+    }
+  },
+  "seiche": {
+    "synchronisation": "Synchronisé avec poulpe au sud de Sidi Ghazi",
+    "2026": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "30 juin",
+        "duree_jours": 91,
+        "raison": "Synchronisé avec poulpe - Prévisionnelle"
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "31 déc",
+        "duree_jours": 107,
+        "raison": "Synchronisé avec poulpe"
+      }
+    },
+    "2025": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "31 mai",
+        "duree_jours": 61
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "15 déc",
+        "duree_jours": 91
+      }
+    },
+    "2024": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "31 mai",
+        "duree_jours": 61
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "15 déc",
+        "duree_jours": 91
+      }
+    },
+    "2023": {
+      "repos_printemps": {
+        "date_debut": "01 avr",
+        "date_fin": "31 mai",
+        "duree_jours": 61
+      },
+      "repos_automne": {
+        "date_debut": "16 sep",
+        "date_fin": "15 déc",
+        "duree_jours": 91
+      }
+    }
+  },
+  "courbine": {
+    "probleme": "Ne couvre PAS le pic reproduction mai-juillet",
+    "2026": {
+      "repos_decembre": {
+        "date_debut": "01 déc",
+        "date_fin": "31 déc",
+        "duree_jours": 31,
+        "raison": "Stock surexploité - Quota prévisionnelle 1297T, taille minimale 70cm"
+      }
+    },
+    "2025": {
+      "repos_decembre": {
+        "date_debut": "01 déc",
+        "date_fin": "31 déc",
+        "duree_jours": 31,
+        "raison": "Stock surexploité - Quota 2025: 1297T, taille minimale 70cm"
+      }
+    },
+    "2024": {
+      "repos_decembre": {
+        "date_debut": "01 déc",
+        "date_fin": "31 déc",
+        "duree_jours": 31,
+        "raison": "Stock surexploité - Quota 2024: 1297T, taille minimale 70cm"
+      }
+    },
+    "2023": {
+      "repos_decembre": {
+        "date_debut": "01 déc",
+        "date_fin": "31 déc",
+        "duree_jours": 31,
+        "raison": "Mesure introduite en 2023 suite à la surexploitation"
+      }
+    }
+  }
+}

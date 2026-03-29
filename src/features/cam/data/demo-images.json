@@ -1,0 +1,170 @@
+[
+  {
+    "id": "IMG-2026-001",
+    "url": "https://images.unsplash.com/photo-1535591273668-578e31182c4f?w=800",
+    "espece": "sardine",
+    "nom_scientifique": "Sardina pilchardus",
+    "source": "Deep Vision Pelagic Dataset",
+    "date_capture": "2026-03-15T10:23:45Z",
+    "zone": "Port Dakhla",
+    "annotations": {
+      "bounding_boxes": [
+        {"x": 120, "y": 80, "width": 180, "height": 45, "confidence": 0.98, "class": "sardine"},
+        {"x": 320, "y": 95, "width": 175, "height": 42, "confidence": 0.97, "class": "sardine"},
+        {"x": 510, "y": 110, "width": 168, "height": 40, "confidence": 0.96, "class": "sardine"}
+      ],
+      "masks": true,
+      "comptage": 12,
+      "taille_moyenne_cm": 17.5,
+      "status": "validated"
+    }
+  },
+  {
+    "id": "IMG-2026-002",
+    "url": "https://images.unsplash.com/photo-1544943910-4c1dc44aab44?w=800",
+    "espece": "poulpe",
+    "nom_scientifique": "Octopus vulgaris",
+    "source": "DeepFish Dataset",
+    "date_capture": "2026-03-16T14:12:33Z",
+    "zone": "Lassarga",
+    "annotations": {
+      "bounding_boxes": [
+        {"x": 200, "y": 150, "width": 280, "height": 220, "confidence": 0.96, "class": "poulpe"}
+      ],
+      "masks": true,
+      "comptage": 1,
+      "taille_moyenne_cm": 13.2,
+      "status": "validated"
+    }
+  },
+  {
+    "id": "IMG-2026-003",
+    "url": "https://images.unsplash.com/photo-1565373679383-5a36b6e0e2c4?w=800",
+    "espece": "maquereau",
+    "nom_scientifique": "Scomber scombrus",
+    "source": "Roboflow Fish Detect",
+    "date_capture": "2026-03-17T09:45:12Z",
+    "zone": "Port Dakhla",
+    "annotations": {
+      "bounding_boxes": [
+        {"x": 150, "y": 100, "width": 220, "height": 55, "confidence": 0.94, "class": "maquereau"},
+        {"x": 400, "y": 120, "width": 215, "height": 52, "confidence": 0.93, "class": "maquereau"}
+      ],
+      "masks": true,
+      "comptage": 8,
+      "taille_moyenne_cm": 24.3,
+      "status": "validated"
+    }
+  },
+  {
+    "id": "IMG-2026-004",
+    "url": "https://images.unsplash.com/photo-1524704796725-9fc3044a58b1?w=800",
+    "espece": "sardine",
+    "nom_scientifique": "Sardina pilchardus",
+    "source": "Deep Vision Pelagic Dataset",
+    "date_capture": "2026-03-18T11:30:22Z",
+    "zone": "Port Dakhla",
+    "annotations": {
+      "bounding_boxes": [
+        {"x": 100, "y": 90, "width": 170, "height": 40, "confidence": 0.97, "class": "sardine"},
+        {"x": 290, "y": 105, "width": 165, "height": 38, "confidence": 0.96, "class": "sardine"},
+        {"x": 470, "y": 95, "width": 172, "height": 41, "confidence": 0.98, "class": "sardine"},
+        {"x": 120, "y": 200, "width": 168, "height": 39, "confidence": 0.95, "class": "sardine"}
+      ],
+      "masks": true,
+      "comptage": 24,
+      "taille_moyenne_cm": 16.8,
+      "status": "validated"
+    }
+  },
+  {
+    "id": "IMG-2026-005",
+    "url": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=800",
+    "espece": "seiche",
+    "nom_scientifique": "Sepia officinalis",
+    "source": "DeepFish Dataset",
+    "date_capture": "2026-03-19T15:18:55Z",
+    "zone": "Ntirifet",
+    "annotations": {
+      "bounding_boxes": [
+        {"x": 180, "y": 140, "width": 250, "height": 180, "confidence": 0.97, "class": "seiche"},
+        {"x": 450, "y": 160, "width": 240, "height": 175, "confidence": 0.96, "class": "seiche"}
+      ],
+      "masks": true,
+      "comptage": 2,
+      "taille_moyenne_cm": 14.5,
+      "status": "validated"
+    }
+  },
+  {
+    "id": "IMG-2026-006",
+    "url": "https://images.unsplash.com/photo-1571512599285-5e2c0c6e4e9b?w=800",
+    "espece": "chinchard",
+    "nom_scientifique": "Trachurus trachurus",
+    "source": "Roboflow Fish Detect",
+    "date_capture": "2026-03-20T08:42:11Z",
+    "zone": "Zone Côtière Sud",
+    "annotations": null,
+    "status": "pending_annotation"
+  },
+  {
+    "id": "IMG-2026-007",
+    "url": "https://images.unsplash.com/photo-1535350356005-fd52b3b524fb?w=800",
+    "espece": "sardine",
+    "nom_scientifique": "Sardina pilchardus",
+    "source": "Deep Vision Pelagic Dataset",
+    "date_capture": "2026-03-21T13:25:40Z",
+    "zone": "Port Dakhla",
+    "annotations": null,
+    "status": "pending_annotation"
+  },
+  {
+    "id": "IMG-2026-008",
+    "url": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=800",
+    "espece": "maquereau",
+    "nom_scientifique": "Scomber scombrus",
+    "source": "Community Fish Detection",
+    "date_capture": "2026-03-22T10:15:30Z",
+    "zone": "Port Dakhla",
+    "annotations": null,
+    "status": "pending_annotation"
+  },
+  {
+    "id": "IMG-2026-009",
+    "url": "https://images.unsplash.com/photo-1560155477-9e785a5b9c8e?w=800",
+    "espece": "poulpe",
+    "nom_scientifique": "Octopus vulgaris",
+    "source": "DeepFish Dataset",
+    "date_capture": "2026-03-23T16:50:25Z",
+    "zone": "Labouirda",
+    "annotations": {
+      "bounding_boxes": [
+        {"x": 220, "y": 180, "width": 300, "height": 240, "confidence": 0.95, "class": "poulpe"}
+      ],
+      "masks": true,
+      "comptage": 1,
+      "taille_moyenne_cm": 11.8,
+      "status": "validated"
+    }
+  },
+  {
+    "id": "IMG-2026-010",
+    "url": "https://images.unsplash.com/photo-1534043464124-3be32fe000c9?w=800",
+    "espece": "sardine",
+    "nom_scientifique": "Sardina pilchardus",
+    "source": "Deep Vision Pelagic Dataset",
+    "date_capture": "2026-03-24T09:33:18Z",
+    "zone": "Port Dakhla",
+    "annotations": {
+      "bounding_boxes": [
+        {"x": 110, "y": 85, "width": 175, "height": 42, "confidence": 0.98, "class": "sardine"},
+        {"x": 305, "y": 100, "width": 170, "height": 40, "confidence": 0.97, "class": "sardine"},
+        {"x": 495, "y": 115, "width": 168, "height": 39, "confidence": 0.96, "class": "sardine"}
+      ],
+      "masks": true,
+      "comptage": 18,
+      "taille_moyenne_cm": 18.2,
+      "status": "validated"
+    }
+  }
+]

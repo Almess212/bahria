@@ -1,0 +1,61 @@
+{
+  "annuel": {
+    "2023": {
+      "total_T": 153827,
+      "valeur_MDH": 961.69
+    },
+    "2024": {
+      "total_T": 164525,
+      "valeur_MDH": 1140.00,
+      "pelagiques_T": 124339,
+      "blancs_T": 39926
+    }
+  },
+  "mensuel_2025": [
+    {
+      "mois": "jan",
+      "tonnage_T": 3161,
+      "valeur_MDH": 64.44
+    },
+    {
+      "mois": "fev",
+      "tonnage_T": 2562,
+      "valeur_MDH": 52.58
+    },
+    {
+      "mois": "mar",
+      "tonnage_T": 4400
+    },
+    {
+      "mois": "avr",
+      "tonnage_T": 9214,
+      "valeur_MDH": 87.4
+    },
+    {
+      "mois": "mai",
+      "tonnage_T": 7500
+    },
+    {
+      "mois": "jun",
+      "tonnage_T": 13200
+    },
+    {
+      "mois": "jul",
+      "tonnage_T": 17127,
+      "valeur_MDH": 159.25
+    },
+    {
+      "mois": "aou",
+      "tonnage_T": 8280,
+      "valeur_MDH": 81.33
+    }
+  ],
+  "flotte": {
+    "RSW": 28,
+    "sardiniers": 79,
+    "barques": 1002,
+    "total_navires": 1109,
+    "marins": 10000
+  },
+  "insight_cle": "Valeur +19% en 2024 malgré repos étendus = preuve que repos bien ciblé augmente les revenus"
+}

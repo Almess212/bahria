@@ -1,0 +1,39 @@
+# BAHRIA Cam — Training Dependencies
+
+# Core
+ultralytics==8.2.0
+torch>=2.0.0
+torchvision>=0.15.0
+numpy>=1.24.0
+opencv-python-headless>=4.8.0
+pillow>=10.0.0
+
+# Data processing
+albumentations>=1.3.1
+pycocotools>=2.0.7
+pyyaml>=6.0
+tqdm>=4.66.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+pandas>=2.0.0
+
+# Utilities
+roboflow>=1.1.0
+supervision>=0.20.0
+fiftyone>=0.22.0  # Dataset exploration (optionnel)
+
+# Jetson TensorRT export
+onnx>=1.15.0
+onnxruntime>=1.16.0  # Si pas CUDA
+# onnxruntime-gpu>=1.16.0  # Si CUDA disponible
+
+# Logging & Monitoring (optionnel)
+# wandb>=0.16.0  # Weights & Biases
+# mlflow>=2.9.0  # MLflow tracking
+
+# Development
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.1.0

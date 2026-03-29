@@ -1,0 +1,77 @@
+{
+  "source": "NOAA - Moyennes historiques Dakhla",
+  "mois": [
+    {
+      "mois": "Jan",
+      "min": 15,
+      "moy": 18,
+      "max": 20
+    },
+    {
+      "mois": "Fev",
+      "min": 15,
+      "moy": 17,
+      "max": 20
+    },
+    {
+      "mois": "Mar",
+      "min": 15,
+      "moy": 18,
+      "max": 20
+    },
+    {
+      "mois": "Avr",
+      "min": 16,
+      "moy": 18,
+      "max": 20
+    },
+    {
+      "mois": "Mai",
+      "min": 16,
+      "moy": 18,
+      "max": 21
+    },
+    {
+      "mois": "Jun",
+      "min": 16,
+      "moy": 18,
+      "max": 22
+    },
+    {
+      "mois": "Jul",
+      "min": 16,
+      "moy": 19,
+      "max": 22
+    },
+    {
+      "mois": "Aou",
+      "min": 17,
+      "moy": 20,
+      "max": 22
+    },
+    {
+      "mois": "Sep",
+      "min": 18,
+      "moy": 20,
+      "max": 23
+    },
+    {
+      "mois": "Oct",
+      "min": 17,
+      "moy": 20,
+      "max": 22
+    },
+    {
+      "mois": "Nov",
+      "min": 17,
+      "moy": 19,
+      "max": 21
+    },
+    {
+      "mois": "Dec",
+      "min": 17,
+      "moy": 18,
+      "max": 21
+    }
+  ]
+}

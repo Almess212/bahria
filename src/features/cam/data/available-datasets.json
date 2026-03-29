@@ -1,0 +1,313 @@
+[
+  {
+    "id": "deep-vision-pelagic",
+    "name": "Deep Vision Pelagic Dataset",
+    "priority": 5,
+    "status": "available",
+    "category": "detection_classification",
+    "description": "Dataset de référence pour espèces pélagiques avec outil de génération d'images synthétiques",
+    "images_count": 1879,
+    "annotations_count": 1879,
+    "species": [
+      {
+        "name": "Hareng atlantique",
+        "scientific": "Clupea harengus",
+        "mapped_to": "sardine",
+        "notes": "Clupéidé similaire à la sardine"
+      },
+      {
+        "name": "Maquereau atlantique",
+        "scientific": "Scomber scombrus",
+        "mapped_to": "maquereau",
+        "notes": "Espèce identique"
+      },
+      {
+        "name": "Merlan bleu",
+        "scientific": "Micromesistius poutassou",
+        "mapped_to": "merlan_bleu",
+        "notes": "Gadidé pélagique"
+      },
+      {
+        "name": "Mésopélagiques",
+        "scientific": "Multiple",
+        "mapped_to": null,
+        "notes": "À exclure du dataset"
+      }
+    ],
+    "annotation_type": ["bounding_boxes", "classification"],
+    "formats": ["COCO", "YOLO", "Pascal VOC"],
+    "bonus": "Outil de génération d'images synthétiques inclus (data augmentation automatique)",
+    "license": "CC-BY 4.0",
+    "source": {
+      "publication": "Allken et al. (2021), Geoscience Data Journal",
+      "doi": "https://doi.org/10.1002/gdj3.114",
+      "download_url": "https://doi.org/10.1002/gdj3.114",
+      "size_mb": 850,
+      "year": 2021
+    },
+    "quality": {
+      "resolution": "high",
+      "lighting": "variable",
+      "environment": "trawl_camera",
+      "occlusion": "low"
+    },
+    "pertinence_bahria": "★★★★★ — Espèces pélagiques identiques (hareng ≈ sardine, maquereau). Idéal pour démarrage.",
+    "use_case": "Fine-tuning principal pour sardine, maquereau, pélagiques",
+    "downloaded": false,
+    "download_date": null,
+    "local_path": null
+  },
+  {
+    "id": "deepfish",
+    "name": "DeepFish — Fish Market Instance Segmentation",
+    "priority": 5,
+    "status": "available",
+    "category": "segmentation_sizing",
+    "description": "Segmentation d'instance pixel-level avec mesures de taille en environnement marché",
+    "images_count": 1291,
+    "annotations_count": 7339,
+    "specimens_count": 7339,
+    "species_count": 59,
+    "species": [
+      {
+        "name": "Sardina pilchardus",
+        "scientific": "Sardina pilchardus",
+        "mapped_to": "sardine",
+        "notes": "Espèce cible exacte"
+      },
+      {
+        "name": "Scomber scombrus",
+        "scientific": "Scomber scombrus",
+        "mapped_to": "maquereau",
+        "notes": "Maquereau commun"
+      },
+      {
+        "name": "Scomber colias",
+        "scientific": "Scomber colias",
+        "mapped_to": "maquereau",
+        "notes": "Maquereau espagnol"
+      },
+      {
+        "name": "Trachurus trachurus",
+        "scientific": "Trachurus trachurus",
+        "mapped_to": "chinchard",
+        "notes": "Chinchard commun"
+      },
+      {
+        "name": "Trachurus mediterraneus",
+        "scientific": "Trachurus mediterraneus",
+        "mapped_to": "chinchard",
+        "notes": "Chinchard méditerranéen"
+      },
+      {
+        "name": "Engraulis encrasicolus",
+        "scientific": "Engraulis encrasicolus",
+        "mapped_to": "anchois",
+        "notes": "Anchois européen"
+      }
+    ],
+    "annotation_type": ["instance_segmentation", "size_measurement", "classification"],
+    "formats": ["COCO", "Mask R-CNN"],
+    "bonus": "Mesures de taille incluses — idéal pour estimation taille/poids",
+    "license": "CC-BY 4.0",
+    "source": {
+      "publication": "Scientific Data (2022)",
+      "doi": "https://www.nature.com/articles/s41597-022-01416-0",
+      "download_url": "https://figshare.com/articles/dataset/DeepFish/",
+      "size_mb": 2400,
+      "year": 2022
+    },
+    "quality": {
+      "resolution": "high",
+      "lighting": "market_conditions",
+      "environment": "fish_boxes",
+      "occlusion": "medium"
+    },
+    "pertinence_bahria": "★★★★★ — Segmentation d'instance + estimation de taille en conditions marché. Le plus proche du cas d'usage usine MFQF.",
+    "use_case": "Entraînement segmentation + module d'estimation de taille",
+    "downloaded": false,
+    "download_date": null,
+    "local_path": null
+  },
+  {
+    "id": "roboflow-fish-detect",
+    "name": "Roboflow Fish Detect (Sardine, Maquereau, Anchois)",
+    "priority": 4,
+    "status": "available",
+    "category": "detection_classification",
+    "description": "Dataset de classification avec espèces cibles directes (sardine, maquereau, anchois, thon)",
+    "images_count": 500,
+    "annotations_count": 500,
+    "species": [
+      {
+        "name": "Sardine",
+        "scientific": "Sardina pilchardus",
+        "mapped_to": "sardine",
+        "notes": "Espèce exacte"
+      },
+      {
+        "name": "Mackerel",
+        "scientific": "Scomber scombrus",
+        "mapped_to": "maquereau",
+        "notes": "Maquereau"
+      },
+      {
+        "name": "Anchovy",
+        "scientific": "Engraulis encrasicolus",
+        "mapped_to": "anchois",
+        "notes": "Anchois"
+      },
+      {
+        "name": "Skipjack tuna",
+        "scientific": "Katsuwonus pelamis",
+        "mapped_to": null,
+        "notes": "Thon listao — hors scope"
+      }
+    ],
+    "annotation_type": ["bounding_boxes", "classification"],
+    "formats": ["YOLO", "COCO", "Pascal VOC", "TFRecord"],
+    "bonus": "Export direct Roboflow en tous formats, augmentation incluse",
+    "license": "CC-BY 4.0",
+    "source": {
+      "publication": "Roboflow Universe",
+      "doi": null,
+      "download_url": "https://universe.roboflow.com/mathi-odfg0/fish-detect-okobf",
+      "size_mb": 180,
+      "year": 2023
+    },
+    "quality": {
+      "resolution": "medium",
+      "lighting": "variable",
+      "environment": "mixed",
+      "occlusion": "low"
+    },
+    "pertinence_bahria": "★★★★☆ — Espèces cibles directes. Qualité/quantité à vérifier, mais utilisable immédiatement.",
+    "use_case": "Complément pour classes sardine/maquereau/anchois",
+    "downloaded": false,
+    "download_date": null,
+    "local_path": null
+  },
+  {
+    "id": "community-fish-detection",
+    "name": "Community Fish Detection Dataset (LILA BC)",
+    "priority": 4,
+    "status": "available",
+    "category": "pretraining",
+    "description": "Méga-dataset de 1.9M+ images pour pré-entraînement détection générique 'fish'",
+    "images_count": 1900000,
+    "annotations_count": 935000,
+    "datasets_merged": 17,
+    "species": [
+      {
+        "name": "Fish (generic)",
+        "scientific": "Multiple",
+        "mapped_to": "fish",
+        "notes": "Catégorie unique pour pré-entraînement"
+      }
+    ],
+    "annotation_type": ["bounding_boxes"],
+    "formats": ["COCO"],
+    "bonus": "17 datasets fusionnés, format COCO unifié",
+    "license": "Mixte (CC-BY, CC-BY-SA, CC0, CDLA — vérifier par sous-dataset)",
+    "source": {
+      "publication": "LILA BC",
+      "doi": null,
+      "download_url": "https://lila.science/datasets/community-fish-detection-dataset/",
+      "size_mb": 85000,
+      "year": 2023
+    },
+    "quality": {
+      "resolution": "mixed",
+      "lighting": "variable",
+      "environment": "underwater",
+      "occlusion": "medium"
+    },
+    "pertinence_bahria": "★★★★☆ — Excellent pour pré-entraîner un détecteur générique 'poisson' avant fine-tuning espèces.",
+    "use_case": "Pré-entraînement backbone avant fine-tuning pélagique",
+    "downloaded": false,
+    "download_date": null,
+    "local_path": null
+  },
+  {
+    "id": "fishnet",
+    "name": "FishNet (ICCV 2023)",
+    "priority": 4,
+    "status": "available",
+    "category": "pretraining",
+    "description": "Dataset massif pour classification avec taxonomie complète (94k images, 17k espèces)",
+    "images_count": 94532,
+    "annotations_count": 94532,
+    "species_count": 17357,
+    "families_count": 463,
+    "species": [
+      {
+        "name": "Multiple",
+        "scientific": "17,357 espèces",
+        "mapped_to": "various",
+        "notes": "Diversité massive pour backbone"
+      }
+    ],
+    "annotation_type": ["bounding_boxes", "classification", "taxonomie", "traits_fonctionnels"],
+    "formats": ["Custom"],
+    "bonus": "22 traits fonctionnels annotés + taxonomie complète",
+    "license": "Recherche uniquement (vérifier conditions)",
+    "source": {
+      "publication": "ICCV 2023",
+      "doi": null,
+      "download_url": "https://github.com/",
+      "size_mb": 12000,
+      "year": 2023
+    },
+    "quality": {
+      "resolution": "high",
+      "lighting": "controlled",
+      "environment": "museum_specimens",
+      "occlusion": "none"
+    },
+    "pertinence_bahria": "★★★★☆ — Diversité massive, idéal pour pré-entraîner backbone classification.",
+    "use_case": "Pré-entraînement classification multi-espèces",
+    "downloaded": false,
+    "download_date": null,
+    "local_path": null
+  },
+  {
+    "id": "noaa-labeled-fishes",
+    "name": "NOAA Labeled Fishes in the Wild",
+    "priority": 3,
+    "status": "available",
+    "category": "pretraining",
+    "description": "Images sous-marines annotées en domaine public (rockfish, espèces de fond)",
+    "images_count": 3500,
+    "annotations_count": 3500,
+    "species": [
+      {
+        "name": "Rockfish (multiple)",
+        "scientific": "Sebastes spp.",
+        "mapped_to": null,
+        "notes": "Espèces de fond — utile uniquement pour pré-entraînement"
+      }
+    ],
+    "annotation_type": ["bounding_boxes"],
+    "formats": ["OpenCV .dat"],
+    "bonus": "Domaine public (NOAA)",
+    "license": "Domaine public (NOAA)",
+    "source": {
+      "publication": "NOAA Fisheries",
+      "doi": null,
+      "download_url": "https://www.fisheries.noaa.gov/west-coast/science-data/labeled-fishes-wild",
+      "size_mb": 423,
+      "year": 2020
+    },
+    "quality": {
+      "resolution": "medium",
+      "lighting": "underwater",
+      "environment": "wild",
+      "occlusion": "high"
+    },
+    "pertinence_bahria": "★★★☆☆ — Espèces de fond (rockfish). Utile uniquement pour pré-entraînement détection générique.",
+    "use_case": "Pré-entraînement détection (optionnel)",
+    "downloaded": false,
+    "download_date": null,
+    "local_path": null
+  }
+]
