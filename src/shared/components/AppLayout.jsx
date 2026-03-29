@@ -10,7 +10,7 @@ export default function AppLayout() {
   const location = useLocation();
   const navigate = useNavigate();
   const { user, role, signOut } = useAuthStore();
-  const { sidebarOpen, toggleSidebar, sst, language, setLanguage } = useAppStore();
+  const { sidebarOpen, toggleSidebar, language, setLanguage } = useAppStore();
   const t = useTranslation(language);
 
   const handleSignOut = () => {
@@ -24,7 +24,7 @@ export default function AppLayout() {
       { path: '/dashboard', icon: LayoutDashboard, label: t.nav.dashboard },
     ];
 
-    if (role === USER_ROLES.ADMIN || role === USER_ROLES.FISHERMAN || role === USER_ROLES.SCIENTIST) {
+    if (role === USER_ROLES.ADMIN || role === USER_ROLES.FACTORY || role === USER_ROLES.SCIENTIST) {
       baseItems.push({ path: '/analysis', icon: FlaskConical, label: t.nav.analysis });
     }
 
@@ -58,14 +58,8 @@ export default function AppLayout() {
           sidebarOpen ? 'w-64' : 'w-20'
         } flex flex-col`}
       >
-        {/* Logo */}
-        <div className="h-16 flex items-center justify-between px-4 border-b border-white/10">
-          {sidebarOpen && (
-            <div className="flex items-center gap-2">
-              <img src="/logo.png" alt="BAHRIA" className="h-10 object-contain" />
-              <span className="text-[#0EA5E9] font-semibold">بحرية</span>
-            </div>
-          )}
+        {/* Menu Toggle */}
+        <div className="h-16 flex items-center justify-end px-4 border-b border-white/10">
           <button onClick={toggleSidebar} className="p-2 hover:bg-white/10 rounded-lg">
             <Menu className="w-5 h-5" />
           </button>
@@ -126,16 +120,10 @@ export default function AppLayout() {
       <div className="flex-1 flex flex-col">
         {/* Header */}
         <header className="h-16 bg-white border-b border-gray-200 flex items-center justify-between px-6">
-          <h1 className="text-xl font-bold text-[#041E42]">BAHRIA</h1>
-
-          {/* SST Badge */}
-          {sst && (
-            <div className="bg-[#0EA5E9]/10 rounded-full px-4 py-2">
-              <span className="text-[#041E42] text-sm font-medium">
-                🌊 SST {sst.sst.toFixed(1)}°C
-              </span>
-            </div>
-          )}
+          <div className="flex items-center gap-3">
+            <img src="/logo.png" alt="BAHRIA" className="h-12 object-contain" />
+            <span className="text-[#0EA5E9] font-semibold text-2xl">بحرية</span>
+          </div>
         </header>
 
         {/* Content */}

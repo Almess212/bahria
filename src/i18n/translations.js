@@ -648,7 +648,7 @@ export const translations = {
       analysis: 'Analyse',
       map: 'Carte',
       assistant: 'Assistant',
-      logbook: 'Logbook',
+      logbook: 'Journal de Pêche',
       profile: 'Profil',
       cam: 'BAHRIA Cam',
       library: 'Bibliothèque',

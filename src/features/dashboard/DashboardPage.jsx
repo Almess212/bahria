@@ -24,7 +24,7 @@ export default function DashboardPage() {
   // Données pour le graphique CPUE par espèce
   const cpueData = species.map(s => ({
     name: s.nom_commun,
-    cpue: s.cpue_recente_kg,
+    cpue: s.cpue_2025,
     tendance: s.tendance_cpue_2y_pct,
     icone: s.icone,
   }));
@@ -39,7 +39,7 @@ export default function DashboardPage() {
   // Données pour le pie chart des espèces
   const pieData = species.map(s => ({
     name: s.nom_commun,
-    value: s.cpue_recente_kg,
+    value: s.cpue_2025,
   }));
 
   const COLORS = ['#0EA5E9', '#10B981', '#F59E0B', '#EF4444'];
@@ -205,7 +205,7 @@ export default function DashboardPage() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <p className="text-sm font-medium text-gray-700">{s.cpue_recente_kg} kg/sortie</p>
+                  <p className="text-sm font-medium text-gray-700">{s.cpue_2025} kg/sortie</p>
                   <p className={`text-xs ${s.tendance_cpue_2y_pct < 0 ? 'text-red-600' : 'text-green-600'}`}>
                     {s.tendance_cpue_2y_pct > 0 ? '+' : ''}{s.tendance_cpue_2y_pct}% ({t.dashboard.years2})
                   </p>
