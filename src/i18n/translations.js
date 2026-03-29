@@ -366,6 +366,93 @@ export const translations = {
       optimizedAllocationDesc: 'يتم توجيه كل شحنة إلى الوحدة الصحيحة: التجميد، التعليب أو الدقيق.',
       automatedTraceability: 'تتبع آلي',
       automatedTraceabilityDesc: 'يتم تسجيل النوع والحجم والحجم تلقائيًا للامتثال لتصدير الاتحاد الأوروبي.',
+
+      // Upload zone
+      uploadInProgress: 'جاري التحميل...',
+      clickToUpload: 'انقر للتحميل',
+      orDragDrop: 'أو السحب والإفلات',
+      fileFormat: 'PNG، JPG أو JPEG (حد أقصى 10 ميجابايت)',
+
+      // Analysis zone
+      analysisInProgress: 'جار التحليل...',
+      identifyingSpeciesText: 'تحديد الأنواع، تقدير الحجم والوزن، العد...',
+      newPhoto: 'صورة جديدة',
+
+      // Results
+      identified: 'تم التعرف',
+      detected: 'تم الكشف',
+      notMonitoredText: 'أنواع غير مراقبة من قبل خطة إدارة مخزونات الداخلة',
+      confidence: 'الثقة:',
+      analysisResults: 'نتائج التحليل',
+      species: 'الأنواع',
+      estimatedSize: 'الحجم المقدر',
+      estimatedWeight: 'الوزن المقدر',
+      quality: 'الجودة',
+      commercialGrade: 'الدرجة التجارية',
+      individualsCount: 'عدد الأفراد',
+      mixedCaptures: 'صيد مختلط',
+      yes2Species: 'نعم (نوعان)',
+      no: 'لا',
+
+      // Quality control
+      qualityControl: 'مراقبة الجودة',
+      freshness: 'النضارة',
+      sizeVsL50: 'الحجم مقابل L50',
+      exportCompliance: 'التوافق مع التصدير',
+
+      // AI Analysis
+      aiAnalysis: 'تحليل الذكاء الاصطناعي',
+      aiModel: 'نموذج: Claude 3.5 Sonnet مع رؤية الكمبيوتر',
+
+      // Action buttons
+      analyzeNewPhoto: 'تحليل صورة جديدة',
+      exportReport: 'تصدير التقرير',
+
+      // History labels
+      confidence: 'الثقة',
+      counting: 'العد',
+      avgSize: 'الحجم المتوسط',
+      totalWeight: 'الوزن الإجمالي',
+      individuals: 'أفراد',
+      conformL50: 'متوافق L50',
+      underL50: 'تحت L50',
+      exportEU: 'تصدير الاتحاد الأوروبي',
+      mixedCapturesLabel: 'صيد مختلط',
+
+      // Stats tab
+      modelInfo: 'معلومات عن النموذج',
+      modelVersion: 'إصدار النموذج',
+      updatedOn: 'تم التحديث في',
+      globalPrecision: 'الدقة الإجمالية',
+      inferenceTime: 'وقت الاستدلال',
+      architecture: 'الهندسة المعمارية',
+      hardware: 'الأجهزة:',
+      performanceBySpecies: 'الأداء حسب الأنواع',
+      precision: 'الدقة',
+      recall: 'الاستدعاء',
+      f1Score: 'نقاط F1',
+      samplesTested: 'عينات تم اختبارها',
+      commonErrors: 'أخطاء شائعة:',
+      sizeWeightEstimation: 'تقدير الحجم/الوزن',
+      length: 'الطول',
+      precisionLabel: 'الدقة:',
+      avgError: 'خطأ متوسط: ±',
+      weight: 'الوزن',
+      countingPerformance: 'أداء العد',
+      dataCollection: 'جمع البيانات',
+      fieldPhotos: 'صور ميدانية',
+      trainingImages: 'صور التدريب',
+      epochs: 'العهود',
+      period: 'الفترة:',
+      zones: 'المناطق:',
+      annotationTime: 'وقت التعليق:',
+      annotators: 'معلقون',
+      roadmapV13: 'خارطة الطريق v1.3 (يونيو 2026)',
+
+      // Tech section
+      technology: 'التكنولوجيا',
+      technologyText: 'تستخدم BAHRIA Cam نماذج YOLO وتجزئة المثيلات على أجهزة NVIDIA Jetson للاستدلال المحلي. تحدد الخوارزمية الأنواع البحرية بدقة 94٪+ على الصور الحقيقية التي تم جمعها في الداخلة.',
+
       analyzePhoto: 'تحليل صورة',
       history: 'السجل',
       modelPerformance: 'أداء النموذج',
@@ -1066,6 +1153,92 @@ export const translations = {
       optimizedAllocationDesc: 'Chaque cargaison est dirigée vers la bonne unité : congélation, conserve ou farine.',
       automatedTraceability: 'Traçabilité automatisée',
       automatedTraceabilityDesc: 'Espèce, calibre et volume enregistrés automatiquement pour la conformité export UE.',
+
+      // Upload zone
+      uploadInProgress: 'Upload en cours...',
+      clickToUpload: 'Cliquez pour uploader',
+      orDragDrop: 'ou glisser-déposer',
+      fileFormat: 'PNG, JPG ou JPEG (MAX. 10MB)',
+
+      // Analysis zone
+      analysisInProgress: 'Analyse en cours...',
+      identifyingSpeciesText: 'Identification de l\'espèce, estimation taille et poids, comptage...',
+      newPhoto: 'Nouvelle photo',
+
+      // Results
+      identified: 'identifiée',
+      detected: 'détecté',
+      notMonitoredText: 'Espèce non suivie par le plan de gestion des stocks de Dakhla',
+      confidence: 'Confiance:',
+      analysisResults: 'Résultats de l\'analyse',
+      species: 'Espèce',
+      estimatedSize: 'Taille estimée',
+      estimatedWeight: 'Poids estimé',
+      quality: 'Qualité',
+      commercialGrade: 'Calibre commercial',
+      individualsCount: 'Nombre d\'individus',
+      mixedCaptures: 'Captures mixtes',
+      yes2Species: 'Oui (2 espèces)',
+      no: 'Non',
+
+      // Quality control
+      qualityControl: 'Contrôle qualité',
+      freshness: 'Fraîcheur',
+      sizeVsL50: 'Taille vs L50',
+      exportCompliance: 'Conformité export',
+
+      // AI Analysis
+      aiAnalysis: 'Analyse IA',
+      aiModel: 'Modèle: Claude 3.5 Sonnet avec vision par ordinateur',
+
+      // Action buttons
+      analyzeNewPhoto: 'Analyser une nouvelle photo',
+      exportReport: 'Exporter le rapport',
+
+      // History labels
+      confidenceLabel: 'Confiance',
+      countingLabel: 'Comptage',
+      avgSizeLabel: 'Taille moy.',
+      totalWeightLabel: 'Poids total',
+      individuals: 'individus',
+      conformL50: 'Conforme L50',
+      underL50: 'Sous L50',
+      exportEU: 'Export UE',
+      mixedCapturesLabel: 'Captures mixtes',
+
+      // Stats tab
+      modelInfo: 'Informations sur le modèle',
+      modelVersionLabel: 'Version du modèle',
+      updatedOn: 'Mis à jour le',
+      globalPrecision: 'Précision globale',
+      inferenceTime: 'Temps d\'inférence',
+      architecture: 'Architecture',
+      hardware: 'Hardware:',
+      performanceBySpecies: 'Performance par espèce',
+      precision: 'Precision',
+      recall: 'Recall',
+      f1Score: 'F1-Score',
+      samplesTested: 'échantillons testés',
+      commonErrors: 'Erreurs communes :',
+      sizeWeightEstimation: 'Estimation taille/poids',
+      length: 'Longueur',
+      precisionLabel: 'Précision:',
+      avgError: 'Erreur moy: ±',
+      weight: 'Poids',
+      countingPerformance: 'Performance comptage',
+      dataCollection: 'Collecte de données',
+      fieldPhotos: 'Photos terrain',
+      trainingImages: 'Images entraînement',
+      epochs: 'Epochs',
+      period: 'Période:',
+      zones: 'Zones:',
+      annotationTime: 'Temps d\'annotation:',
+      annotators: 'annotateurs',
+      roadmapV13: 'Roadmap v1.3 (Juin 2026)',
+
+      // Tech section
+      technologyLabel: 'Technologie',
+      technologyText: 'BAHRIA Cam utilise des modèles YOLO et segmentation d\'instance sur hardware NVIDIA Jetson pour l\'inférence locale. L\'algorithme identifie les espèces pélagiques avec 94%+ de précision sur images réelles collectées à Dakhla.',
 
       analyzePhoto: 'Analyser une photo',
       history: 'Historique',

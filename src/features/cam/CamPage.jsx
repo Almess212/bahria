@@ -281,15 +281,15 @@ export default function CamPage() {
                   {uploading ? (
                     <>
                       <Loader2 className="w-12 h-12 text-[#0EA5E9] mb-4 animate-spin" />
-                      <p className="mb-2 text-sm text-gray-500">Upload en cours...</p>
+                      <p className="mb-2 text-sm text-gray-500">{t.cam.uploadInProgress}</p>
                     </>
                   ) : (
                     <>
                       <Camera className="w-16 h-16 text-gray-400 mb-4" />
                       <p className="mb-2 text-sm text-gray-500">
-                        <span className="font-semibold">Cliquez pour uploader</span> ou glisser-déposer
+                        <span className="font-semibold">{t.cam.clickToUpload}</span> {t.cam.orDragDrop}
                       </p>
-                      <p className="text-xs text-gray-500">PNG, JPG ou JPEG (MAX. 10MB)</p>
+                      <p className="text-xs text-gray-500">{t.cam.fileFormat}</p>
                     </>
                   )}
                 </div>
@@ -306,9 +306,9 @@ export default function CamPage() {
                 {analyzing ? (
                   <div className="flex flex-col items-center justify-center p-8">
                     <Loader2 className="w-16 h-16 text-[#0EA5E9] mb-4 animate-spin" />
-                    <p className="text-xl font-semibold text-gray-900 mb-2">Analyse en cours...</p>
+                    <p className="text-xl font-semibold text-gray-900 mb-2">{t.cam.analysisInProgress}</p>
                     <p className="text-sm text-gray-500">
-                      Identification de l'espèce, estimation taille et poids, comptage...
+                      {t.cam.identifyingSpeciesText}
                     </p>
                     <div className="mt-6 w-full max-w-md bg-gray-200 rounded-full h-2">
                       <div className="bg-[#0EA5E9] h-2 rounded-full animate-pulse" style={{ width: '70%' }}></div>
@@ -325,7 +325,7 @@ export default function CamPage() {
                       onClick={handleReset}
                       className="absolute top-4 right-4 px-4 py-2 bg-white rounded-lg shadow-lg hover:bg-gray-100"
                     >
-                      Nouvelle photo
+                      {t.cam.newPhoto}
                     </button>
                   </div>
                 )}
@@ -348,13 +348,13 @@ export default function CamPage() {
               )}
               <div className="flex-1">
                 <h2 className={`text-2xl font-bold ${result.hors_plan_gestion ? 'text-blue-900' : 'text-green-900'} mb-2`}>
-                  {result.hors_plan_gestion ? `${result.espece} identifiée` : `${result.espece} détecté`}
+                  {result.hors_plan_gestion ? `${result.espece} ${t.cam.identified}` : `${result.espece} ${t.cam.detected}`}
                 </h2>
                 <p className={`text-lg ${result.hors_plan_gestion ? 'text-blue-800' : 'text-green-800'}`}>
                   {result.hors_plan_gestion ? (
-                    <span>Espèce non suivie par le plan de gestion des stocks de Dakhla</span>
+                    <span>{t.cam.notMonitoredText}</span>
                   ) : (
-                    <>Confiance: <span className="font-bold">{result.confidence}%</span></>
+                    <>{t.cam.confidence} <span className="font-bold">{result.confidence}%</span></>
                   )}
                 </p>
               </div>
@@ -374,37 +374,37 @@ export default function CamPage() {
 
             {/* Résultats détaillés */}
             <div className="bg-white rounded-xl shadow-sm p-6">
-              <h3 className="text-xl font-bold text-[#041E42] mb-4">Résultats de l'analyse</h3>
+              <h3 className="text-xl font-bold text-[#041E42] mb-4">{t.cam.analysisResults}</h3>
 
               <div className="space-y-4">
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="text-gray-700">Espèce</span>
+                  <span className="text-gray-700">{t.cam.species}</span>
                   <span className="font-bold text-[#041E42]">{result.espece}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="text-gray-700">Taille estimée</span>
+                  <span className="text-gray-700">{t.cam.estimatedSize}</span>
                   <span className="font-semibold text-gray-900">{result.tailleEstimee}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="text-gray-700">Poids estimé</span>
+                  <span className="text-gray-700">{t.cam.estimatedWeight}</span>
                   <span className="font-semibold text-gray-900">{result.poidsEstime}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="text-gray-700">Qualité</span>
+                  <span className="text-gray-700">{t.cam.quality}</span>
                   <span className="font-semibold text-green-600">{result.qualite}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="text-gray-700">Calibre commercial</span>
+                  <span className="text-gray-700">{t.cam.commercialGrade}</span>
                   <span className="font-semibold text-gray-900">{result.calibre}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg">
-                  <span className="text-gray-700">Nombre d'individus</span>
+                  <span className="text-gray-700">{t.cam.individualsCount}</span>
                   <span className="font-bold text-[#0EA5E9] text-xl">{result.comptage}</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                  <span className="text-gray-700">Captures mixtes</span>
+                  <span className="text-gray-700">{t.cam.mixedCaptures}</span>
                   <span className={`font-semibold ${result.mix ? 'text-orange-600' : 'text-green-600'}`}>
-                    {result.mix ? 'Oui (2 espèces)' : 'Non'}
+                    {result.mix ? t.cam.yes2Species : t.cam.no}
                   </span>
                 </div>
               </div>
@@ -413,7 +413,7 @@ export default function CamPage() {
 
           {/* Détails supplémentaires */}
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h3 className="text-xl font-bold text-[#041E42] mb-4">Contrôle qualité</h3>
+            <h3 className="text-xl font-bold text-[#041E42] mb-4">{t.cam.qualityControl}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               {result.details.map((detail, idx) => (
                 <div key={idx} className="flex items-start gap-3 p-4 bg-gray-50 rounded-lg">
@@ -437,9 +437,9 @@ export default function CamPage() {
               <div className="flex items-start gap-3">
                 <div className="text-3xl">🤖</div>
                 <div>
-                  <h3 className="text-lg font-bold text-[#041E42] mb-2">Analyse IA</h3>
+                  <h3 className="text-lg font-bold text-[#041E42] mb-2">{t.cam.aiAnalysis}</h3>
                   <p className="text-gray-700">{result.raison_analyse}</p>
-                  <p className="text-xs text-gray-500 mt-2">Modèle: Claude 3.5 Sonnet avec vision par ordinateur</p>
+                  <p className="text-xs text-gray-500 mt-2">{t.cam.aiModel}</p>
                 </div>
               </div>
             </div>
@@ -451,12 +451,12 @@ export default function CamPage() {
               onClick={handleReset}
               className="px-6 py-3 bg-[#0EA5E9] text-white rounded-lg hover:bg-[#0284c7] transition-colors"
             >
-              Analyser une nouvelle photo
+              {t.cam.analyzeNewPhoto}
             </button>
             <button
               className="px-6 py-3 border-2 border-[#0EA5E9] text-[#0EA5E9] rounded-lg hover:bg-[#0EA5E9] hover:text-white transition-colors"
             >
-              Exporter le rapport
+              {t.cam.exportReport}
             </button>
           </div>
         </div>
@@ -480,19 +480,19 @@ export default function CamPage() {
 
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
                       <div>
-                        <p className="text-xs text-gray-600">Confiance</p>
+                        <p className="text-xs text-gray-600">{t.cam.historyConfidence}</p>
                         <p className="text-sm font-bold text-[#0EA5E9]">{analysis.confidence}%</p>
                       </div>
                       <div>
-                        <p className="text-xs text-gray-600">Comptage</p>
-                        <p className="text-sm font-semibold text-gray-900">{analysis.comptage} individus</p>
+                        <p className="text-xs text-gray-600">{t.cam.historyCounting}</p>
+                        <p className="text-sm font-semibold text-gray-900">{analysis.comptage} {t.cam.historyIndividuals}</p>
                       </div>
                       <div>
-                        <p className="text-xs text-gray-600">Taille moy.</p>
+                        <p className="text-xs text-gray-600">{t.cam.historyAvgSize}</p>
                         <p className="text-sm font-semibold text-gray-900">{analysis.taille_moyenne_cm} cm</p>
                       </div>
                       <div>
-                        <p className="text-xs text-gray-600">Poids total</p>
+                        <p className="text-xs text-gray-600">{t.cam.historyTotalWeight}</p>
                         <p className="text-sm font-semibold text-gray-900">{analysis.poids_total_kg} kg</p>
                       </div>
                     </div>
@@ -509,16 +509,16 @@ export default function CamPage() {
                       <span className={`px-2 py-1 text-xs font-medium rounded ${
                         analysis.conformite_L50 ? 'bg-green-100 text-green-800' : 'bg-orange-100 text-orange-800'
                       }`}>
-                        {analysis.conformite_L50 ? '✓ Conforme L50' : '⚠ Sous L50'}
+                        {analysis.conformite_L50 ? `✓ ${t.cam.historyCompliantL50}` : `⚠ ${t.cam.historyUnderL50}`}
                       </span>
                       {analysis.conformite_export_ue && (
                         <span className="px-2 py-1 text-xs font-medium rounded bg-blue-100 text-blue-800">
-                          ✓ Export UE
+                          ✓ {t.cam.historyEUExport}
                         </span>
                       )}
                       {analysis.captures_mixtes && (
                         <span className="px-2 py-1 text-xs font-medium rounded bg-orange-100 text-orange-800">
-                          Captures mixtes
+                          {t.cam.historyMixedCaptures}
                         </span>
                       )}
                     </div>
@@ -540,32 +540,32 @@ export default function CamPage() {
         <div className="space-y-6">
           {/* Modèle général */}
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h2 className="text-xl font-bold text-[#041E42] mb-4">Informations sur le modèle</h2>
+            <h2 className="text-xl font-bold text-[#041E42] mb-4">{t.cam.modelInfo}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-gray-600 mb-1">Version du modèle</p>
+                <p className="text-sm text-gray-600 mb-1">{t.cam.modelVersion}</p>
                 <p className="text-lg font-bold text-[#041E42]">{modelStats.model_version}</p>
-                <p className="text-xs text-gray-500 mt-1">Mis à jour le {new Date(modelStats.last_updated).toLocaleDateString('fr-FR')}</p>
+                <p className="text-xs text-gray-500 mt-1">{t.cam.updatedOn} {new Date(modelStats.last_updated).toLocaleDateString(language === 'ar' ? 'ar-MA' : 'fr-FR')}</p>
               </div>
               <div className="p-4 bg-green-50 rounded-lg">
-                <p className="text-sm text-gray-600 mb-1">Précision globale</p>
+                <p className="text-sm text-gray-600 mb-1">{t.cam.globalPrecision}</p>
                 <p className="text-3xl font-bold text-green-600">{modelStats.precision_globale}%</p>
               </div>
               <div className="p-4 bg-purple-50 rounded-lg">
-                <p className="text-sm text-gray-600 mb-1">Temps d'inférence</p>
+                <p className="text-sm text-gray-600 mb-1">{t.cam.inferenceTime}</p>
                 <p className="text-3xl font-bold text-purple-600">{modelStats.inference_time_ms}ms</p>
               </div>
             </div>
             <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-              <p className="text-sm text-gray-600 mb-2">Architecture</p>
+              <p className="text-sm text-gray-600 mb-2">{t.cam.architecture}</p>
               <p className="font-medium text-gray-900">{modelStats.architecture}</p>
-              <p className="text-sm text-gray-600 mt-2">Hardware: {modelStats.hardware}</p>
+              <p className="text-sm text-gray-600 mt-2">{t.cam.hardware}: {modelStats.hardware}</p>
             </div>
           </div>
 
           {/* Précision par espèce */}
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h2 className="text-xl font-bold text-[#041E42] mb-4">Performance par espèce</h2>
+            <h2 className="text-xl font-bold text-[#041E42] mb-4">{t.cam.performanceBySpecies}</h2>
             <div className="space-y-4">
               {Object.entries(modelStats.precision_par_espece).map(([espece, stats]) => (
                 <div key={espece} className="border border-gray-200 rounded-lg p-4">
@@ -577,21 +577,21 @@ export default function CamPage() {
                   </div>
                   <div className="grid grid-cols-3 gap-3 mb-3">
                     <div>
-                      <p className="text-xs text-gray-600">Precision</p>
+                      <p className="text-xs text-gray-600">{t.cam.precision}</p>
                       <p className="text-sm font-semibold">{stats.precision}%</p>
                     </div>
                     <div>
-                      <p className="text-xs text-gray-600">Recall</p>
+                      <p className="text-xs text-gray-600">{t.cam.recall}</p>
                       <p className="text-sm font-semibold">{stats.recall}%</p>
                     </div>
                     <div>
-                      <p className="text-xs text-gray-600">F1-Score</p>
+                      <p className="text-xs text-gray-600">{t.cam.f1Score}</p>
                       <p className="text-sm font-semibold">{stats.f1_score}%</p>
                     </div>
                   </div>
                   <div className="text-xs text-gray-600">
-                    <p className="mb-1">{stats.samples} échantillons testés</p>
-                    <p className="font-medium text-gray-900">Erreurs communes :</p>
+                    <p className="mb-1">{stats.samples} {t.cam.samplesTested}</p>
+                    <p className="font-medium text-gray-900">{t.cam.commonErrors}</p>
                     <ul className="list-disc list-inside mt-1 space-y-0.5">
                       {stats.erreurs_communes.map((erreur, idx) => (
                         <li key={idx}>{erreur}</li>
@@ -606,23 +606,23 @@ export default function CamPage() {
           {/* Performance estimation */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-white rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-bold text-[#041E42] mb-4">Estimation taille/poids</h3>
+              <h3 className="text-lg font-bold text-[#041E42] mb-4">{t.cam.sizeWeightEstimation}</h3>
               <div className="space-y-3">
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Longueur</p>
-                  <p className="text-sm">Précision: <span className="font-bold text-green-600">{modelStats.performance_taille.estimation_longueur.precision_pct}%</span></p>
-                  <p className="text-xs text-gray-500">Erreur moy: ±{modelStats.performance_taille.estimation_longueur.erreur_moyenne_cm} cm</p>
+                  <p className="text-sm text-gray-600 mb-1">{t.cam.length}</p>
+                  <p className="text-sm">{t.cam.precision}: <span className="font-bold text-green-600">{modelStats.performance_taille.estimation_longueur.precision_pct}%</span></p>
+                  <p className="text-xs text-gray-500">{t.cam.avgError}: ±{modelStats.performance_taille.estimation_longueur.erreur_moyenne_cm} cm</p>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-600 mb-1">Poids</p>
-                  <p className="text-sm">Précision: <span className="font-bold text-green-600">{modelStats.performance_taille.estimation_poids.precision_pct}%</span></p>
-                  <p className="text-xs text-gray-500">Erreur moy: ±{modelStats.performance_taille.estimation_poids.erreur_moyenne_g} g</p>
+                  <p className="text-sm text-gray-600 mb-1">{t.cam.weight}</p>
+                  <p className="text-sm">{t.cam.precision}: <span className="font-bold text-green-600">{modelStats.performance_taille.estimation_poids.precision_pct}%</span></p>
+                  <p className="text-xs text-gray-500">{t.cam.avgError}: ±{modelStats.performance_taille.estimation_poids.erreur_moyenne_g} g</p>
                 </div>
               </div>
             </div>
 
             <div className="bg-white rounded-xl shadow-sm p-6">
-              <h3 className="text-lg font-bold text-[#041E42] mb-4">Performance comptage</h3>
+              <h3 className="text-lg font-bold text-[#041E42] mb-4">{t.cam.countingPerformance}</h3>
               <div className="space-y-2">
                 {Object.entries(modelStats.performance_comptage).map(([range, stats]) => (
                   <div key={range} className="flex justify-between items-center p-2 bg-gray-50 rounded">
@@ -636,31 +636,31 @@ export default function CamPage() {
 
           {/* Dataset info */}
           <div className="bg-white rounded-xl shadow-sm p-6">
-            <h3 className="text-lg font-bold text-[#041E42] mb-4">Collecte de données</h3>
+            <h3 className="text-lg font-bold text-[#041E42] mb-4">{t.cam.dataCollection}</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
               <div className="p-3 bg-blue-50 rounded-lg">
-                <p className="text-sm text-gray-600">Photos terrain</p>
+                <p className="text-sm text-gray-600">{t.cam.fieldPhotos}</p>
                 <p className="text-2xl font-bold text-[#041E42]">{modelStats.donnees_collecte.photos_terrain.toLocaleString()}</p>
               </div>
               <div className="p-3 bg-green-50 rounded-lg">
-                <p className="text-sm text-gray-600">Images entraînement</p>
+                <p className="text-sm text-gray-600">{t.cam.trainingImages}</p>
                 <p className="text-2xl font-bold text-[#041E42]">{modelStats.images_entrainement.toLocaleString()}</p>
               </div>
               <div className="p-3 bg-purple-50 rounded-lg">
-                <p className="text-sm text-gray-600">Epochs</p>
+                <p className="text-sm text-gray-600">{t.cam.epochs}</p>
                 <p className="text-2xl font-bold text-[#041E42]">{modelStats.epochs_trained}</p>
               </div>
             </div>
             <div className="text-sm text-gray-600">
-              <p className="mb-2"><span className="font-medium">Période:</span> {modelStats.donnees_collecte.periode}</p>
-              <p className="mb-2"><span className="font-medium">Zones:</span> {modelStats.donnees_collecte.zones_couvertes.join(', ')}</p>
-              <p><span className="font-medium">Temps d'annotation:</span> {modelStats.donnees_collecte.annotation.temps_total_heures}h par {modelStats.donnees_collecte.annotation.annotateurs} annotateurs</p>
+              <p className="mb-2"><span className="font-medium">{t.cam.period}:</span> {modelStats.donnees_collecte.periode}</p>
+              <p className="mb-2"><span className="font-medium">{t.cam.zones}:</span> {modelStats.donnees_collecte.zones_couvertes.join(', ')}</p>
+              <p><span className="font-medium">{t.cam.annotationTime}:</span> {modelStats.donnees_collecte.annotation.temps_total_heures}h {t.cam.by} {modelStats.donnees_collecte.annotation.annotateurs} {t.cam.annotators}</p>
             </div>
           </div>
 
           {/* Roadmap v1.3 */}
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-sm p-6 border border-blue-200">
-            <h3 className="text-lg font-bold text-[#041E42] mb-3">Roadmap v1.3 (Juin 2026)</h3>
+            <h3 className="text-lg font-bold text-[#041E42] mb-3">{t.cam.roadmapV13}</h3>
             <ul className="space-y-2">
               {modelStats.roadmap_v1_3.ameliorations.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2">
@@ -675,10 +675,9 @@ export default function CamPage() {
 
       {/* Info technique */}
       <div className="bg-purple-50 border-l-4 border-purple-500 rounded-xl p-4 text-sm text-gray-700">
-        <p className="font-medium mb-1">🔬 Technologie</p>
+        <p className="font-medium mb-1">🔬 {t.cam.technology}</p>
         <p>
-          BAHRIA Cam utilise des modèles YOLO et segmentation d'instance sur hardware NVIDIA Jetson pour l'inférence locale.
-          L'algorithme identifie les espèces pélagiques avec 94%+ de précision sur images réelles collectées à Dakhla.
+          {t.cam.technologyDescription}
         </p>
       </div>
     </div>
