@@ -13,6 +13,9 @@ export default function DataManagementPage() {
   const [selectedSpecies, setSelectedSpecies] = useState('all');
   const [selectedImage, setSelectedImage] = useState(null);
 
+  // Placeholder SVG inline pour éviter les erreurs DNS
+  const placeholderImage = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect width='400' height='300' fill='%23e5e7eb'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='18' fill='%239ca3af'%3EImage non disponible%3C/text%3E%3C/svg%3E";
+
   // Filtrer les images
   const filteredImages = demoImages.filter(img => {
     if (selectedSource !== 'all' && img.source !== selectedSource) return false;
@@ -166,7 +169,8 @@ export default function DataManagementPage() {
                 alt={img.id}
                 className="w-full h-full object-cover"
                 onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/400x300?text=Image+non+disponible';
+                  e.target.onerror = null; // Prevent infinite loop
+                  e.target.src = placeholderImage;
                 }}
               />
               <div className="absolute top-2 right-2">
@@ -229,7 +233,8 @@ export default function DataManagementPage() {
                 alt={selectedImage.id}
                 className="w-full rounded-lg mb-4"
                 onError={(e) => {
-                  e.target.src = 'https://via.placeholder.com/800x600?text=Image+non+disponible';
+                  e.target.onerror = null; // Prevent infinite loop
+                  e.target.src = placeholderImage;
                 }}
               />
 
