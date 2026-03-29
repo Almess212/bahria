@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { LayoutDashboard, FlaskConical, Map, Compass, BookOpen, Camera, Menu, LogOut, Database, Edit, Package, User, Languages } from 'lucide-react';
+import { LayoutDashboard, FlaskConical, Map, Compass, BookOpen, Camera, Menu, LogOut, Database, Edit, Package, User, Languages, Fish } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuthStore from '../../store/authStore';
 import useAppStore from '../../store/appStore';
@@ -26,6 +26,7 @@ export default function AppLayout() {
 
     if (role === USER_ROLES.ADMIN || role === USER_ROLES.FACTORY || role === USER_ROLES.SCIENTIST) {
       baseItems.push({ path: '/analysis', icon: FlaskConical, label: t.nav.analysis });
+      baseItems.push({ path: '/species', icon: Fish, label: t.nav.species });
     }
 
     if (role === USER_ROLES.ADMIN || role === USER_ROLES.FISHERMAN || role === USER_ROLES.SCIENTIST) {

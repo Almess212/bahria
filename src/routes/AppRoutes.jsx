@@ -13,6 +13,7 @@ import MapPage from '../features/map/MapPage';
 import AssistantPage from '../features/assistant/AssistantPage';
 import LogbookPage from '../features/logbook/JournalPechePage';
 import ProfilePage from '../features/profile/ProfilePage';
+import SpeciesPage from '../features/species/SpeciesPage';
 import CamPage from '../features/cam/CamPage';
 import DataManagementPage from '../features/cam/DataManagementPage';
 import AnnotationPage from '../features/cam/AnnotationPage';
@@ -53,6 +54,7 @@ export default function AppRoutes() {
           <Route path="assistant" element={<AssistantPage />} />
           <Route path="logbook" element={<LogbookPage />} />
           <Route path="profile" element={<ProfilePage />} />
+          <Route path="species" element={<SpeciesPage />} />
           <Route path="cam" element={<CamPage />} />
           <Route path="dataset-library" element={<DatasetLibraryPage />} />
           <Route path="data-management" element={<DataManagementPage />} />
