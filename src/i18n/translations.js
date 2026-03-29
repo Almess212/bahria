@@ -345,6 +345,27 @@ export const translations = {
     cam: {
       title: 'BAHRIA Cam',
       subtitle: 'رؤية الكمبيوتر للتعرف على الأنواع',
+
+      // Industrial Challenge
+      industrialChallenge: 'التحدي الصناعي',
+      industrialChallengeIntro: 'تستقبل مصانع الداخلة يوميًا مئات الأطنان من الأسماك المختلطة من سفن RSW. الشحنات دائماً مختلطة - عدة أنواع، أحجام مختلفة. ثلاث مشاكل رئيسية تنتج:',
+      delayedSale: 'تأخر البيع',
+      delayedSaleDesc: 'لا يمكن للمصنع البيع إلا بعد الفرز اليدوي. تفقد الأسماك قيمتها كل ساعة.',
+      costlySorting: 'فرز مكلف',
+      costlySortingDesc: 'عشرات العمال للفرز، مع أخطاء التصنيف والمعايرة.',
+      zeroVisibility: 'صفر رؤية في البحر',
+      zeroVisibilityDesc: 'يعطي القبطان تقديرًا. يكتشف المصنع المحتوى الحقيقي في الرصيف.',
+
+      // Business Benefits
+      businessBenefits: 'فوائد المصنع',
+      preSale: 'بيع مسبق للشحنات',
+      preSaleDesc: 'يُعرف التكوين الدقيق في البحر. يبدأ المصنع في البيع قبل الإنزال.',
+      reducedDockTime: 'تقليل الوقت في الرصيف',
+      reducedDockTimeDesc: 'يتم توجيه الأسماك بشكل أسرع. نضارة أفضل، سعر بيع أفضل.',
+      optimizedAllocation: 'تخصيص محسّن',
+      optimizedAllocationDesc: 'يتم توجيه كل شحنة إلى الوحدة الصحيحة: التجميد، التعليب أو الدقيق.',
+      automatedTraceability: 'تتبع آلي',
+      automatedTraceabilityDesc: 'يتم تسجيل النوع والحجم والحجم تلقائيًا للامتثال لتصدير الاتحاد الأوروبي.',
       analyzePhoto: 'تحليل صورة',
       history: 'السجل',
       modelPerformance: 'أداء النموذج',
@@ -1024,6 +1045,28 @@ export const translations = {
     cam: {
       title: 'BAHRIA Cam',
       subtitle: 'Vision par ordinateur pour reconnaissance d\'espèces',
+
+      // Industrial Challenge
+      industrialChallenge: 'Le Constat Industriel',
+      industrialChallengeIntro: 'Les usines de Dakhla reçoivent quotidiennement des centaines de tonnes de poisson en vrac depuis les navires RSW. Les cargaisons sont systématiquement mixtes — plusieurs espèces, différentes tailles. Trois problèmes majeurs en résultent :',
+      delayedSale: 'Vente retardée',
+      delayedSaleDesc: 'L\'usine ne peut vendre qu\'après le tri manuel. Le poisson perd de la valeur chaque heure.',
+      costlySorting: 'Tri coûteux',
+      costlySortingDesc: 'Des dizaines d\'opérateurs pour le tri, avec des erreurs de classification et de calibrage.',
+      zeroVisibility: 'Zéro visibilité en mer',
+      zeroVisibilityDesc: 'Le capitaine donne une estimation. L\'usine découvre le vrai contenu au quai.',
+
+      // Business Benefits
+      businessBenefits: 'Bénéfices pour l\'Usine',
+      preSale: 'Pré-vente des cargaisons',
+      preSaleDesc: 'La composition exacte est connue en mer. L\'usine commence à vendre avant le débarquement.',
+      reducedDockTime: 'Réduction du temps au quai',
+      reducedDockTimeDesc: 'Le poisson est orienté plus vite. Meilleure fraîcheur, meilleur prix de vente.',
+      optimizedAllocation: 'Allocation optimisée',
+      optimizedAllocationDesc: 'Chaque cargaison est dirigée vers la bonne unité : congélation, conserve ou farine.',
+      automatedTraceability: 'Traçabilité automatisée',
+      automatedTraceabilityDesc: 'Espèce, calibre et volume enregistrés automatiquement pour la conformité export UE.',
+
       analyzePhoto: 'Analyser une photo',
       history: 'Historique',
       modelPerformance: 'Performance du modèle',

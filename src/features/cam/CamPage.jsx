@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Camera, Upload, Image as ImageIcon, CheckCircle, XCircle, Loader2, BarChart3, History, TrendingUp } from 'lucide-react';
+import { Camera, Upload, Image as ImageIcon, CheckCircle, XCircle, Loader2, BarChart3, History, TrendingUp, AlertTriangle, DollarSign, Clock, Users, Package, Ship, Target } from 'lucide-react';
 import camAnalyses from './data/cam-analyses.json';
 import modelStats from './data/model-stats.json';
 import useAppStore from '../../store/appStore';
@@ -113,6 +113,92 @@ export default function CamPage() {
       <div>
         <h1 className="text-3xl font-bold text-[#041E42]">{t.cam.title}</h1>
         <p className="text-gray-600 mt-1">{t.cam.subtitle}</p>
+      </div>
+
+      {/* Problématique industrielle */}
+      <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl shadow-sm p-6 border border-red-100">
+        <h2 className="text-xl font-bold text-[#041E42] mb-4 flex items-center gap-2">
+          <AlertTriangle className="w-6 h-6 text-red-600" />
+          {t.cam.industrialChallenge || 'Le Constat Industriel'}
+        </h2>
+        <p className="text-gray-700 mb-4">
+          {t.cam.industrialChallengeIntro || 'Les usines de Dakhla reçoivent quotidiennement des centaines de tonnes de poisson en vrac depuis les navires RSW. Les cargaisons sont systématiquement mixtes — plusieurs espèces, différentes tailles. Trois problèmes majeurs en résultent :'}
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white rounded-lg p-4 border-l-4 border-red-500">
+            <div className="flex items-start gap-3 mb-2">
+              <Clock className="w-6 h-6 text-red-600 flex-shrink-0" />
+              <h3 className="font-bold text-gray-900">{t.cam.delayedSale || 'Vente retardée'}</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              {t.cam.delayedSaleDesc || "L'usine ne peut vendre qu'après le tri manuel. Le poisson perd de la valeur chaque heure."}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border-l-4 border-orange-500">
+            <div className="flex items-start gap-3 mb-2">
+              <Users className="w-6 h-6 text-orange-600 flex-shrink-0" />
+              <h3 className="font-bold text-gray-900">{t.cam.costlySorting || 'Tri coûteux'}</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              {t.cam.costlySortingDesc || 'Des dizaines d\'opérateurs pour le tri, avec des erreurs de classification et de calibrage.'}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border-l-4 border-yellow-500">
+            <div className="flex items-start gap-3 mb-2">
+              <Ship className="w-6 h-6 text-yellow-600 flex-shrink-0" />
+              <h3 className="font-bold text-gray-900">{t.cam.zeroVisibility || 'Zéro visibilité en mer'}</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              {t.cam.zeroVisibilityDesc || "Le capitaine donne une estimation. L'usine découvre le vrai contenu au quai."}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* ROI Business */}
+      <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl shadow-sm p-6 border border-green-200">
+        <h2 className="text-xl font-bold text-[#041E42] mb-4 flex items-center gap-2">
+          <DollarSign className="w-6 h-6 text-green-600" />
+          {t.cam.businessBenefits || 'Bénéfices pour l\'Usine'}
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-white rounded-lg p-4 border-l-4 border-green-500">
+            <div className="flex items-start gap-3 mb-2">
+              <Target className="w-6 h-6 text-green-600 flex-shrink-0" />
+              <h3 className="font-bold text-gray-900">{t.cam.preSale || 'Pré-vente des cargaisons'}</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              {t.cam.preSaleDesc || "La composition exacte est connue en mer. L'usine commence à vendre avant le débarquement."}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border-l-4 border-blue-500">
+            <div className="flex items-start gap-3 mb-2">
+              <Clock className="w-6 h-6 text-blue-600 flex-shrink-0" />
+              <h3 className="font-bold text-gray-900">{t.cam.reducedDockTime || 'Réduction du temps au quai'}</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              {t.cam.reducedDockTimeDesc || 'Le poisson est orienté plus vite. Meilleure fraîcheur, meilleur prix de vente.'}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border-l-4 border-purple-500">
+            <div className="flex items-start gap-3 mb-2">
+              <Package className="w-6 h-6 text-purple-600 flex-shrink-0" />
+              <h3 className="font-bold text-gray-900">{t.cam.optimizedAllocation || 'Allocation optimisée'}</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              {t.cam.optimizedAllocationDesc || 'Chaque cargaison est dirigée vers la bonne unité : congélation, conserve ou farine.'}
+            </p>
+          </div>
+          <div className="bg-white rounded-lg p-4 border-l-4 border-indigo-500">
+            <div className="flex items-start gap-3 mb-2">
+              <CheckCircle className="w-6 h-6 text-indigo-600 flex-shrink-0" />
+              <h3 className="font-bold text-gray-900">{t.cam.automatedTraceability || 'Traçabilité automatisée'}</h3>
+            </div>
+            <p className="text-sm text-gray-700">
+              {t.cam.automatedTraceabilityDesc || 'Espèce, calibre et volume enregistrés automatiquement pour la conformité export UE.'}
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Tabs */}
