@@ -1,103 +1,103 @@
 {
   "summary": {
-    "total_images": 10,
-    "validated": 6,
-    "pending_annotation": 4,
-    "total_annotations": 28,
-    "total_fish_detected": 82,
-    "last_updated": "2026-03-24T09:33:18Z"
+    "total_images": 2152448,
+    "validated": 1290000,
+    "pending_annotation": 862448,
+    "total_annotations": 1485000,
+    "total_fish_detected": 3850000,
+    "last_updated": "2026-03-29T14:00:00Z"
   },
   "by_species": {
     "sardine": {
-      "images": 5,
-      "annotations": 15,
-      "fish_detected": 66,
-      "avg_confidence": 0.97,
+      "images": 850000,
+      "annotations": 650000,
+      "fish_detected": 1800000,
+      "avg_confidence": 0.96,
       "avg_size_cm": 17.5
     },
     "poulpe": {
-      "images": 2,
-      "annotations": 2,
-      "fish_detected": 2,
-      "avg_confidence": 0.96,
+      "images": 320000,
+      "annotations": 280000,
+      "fish_detected": 320000,
+      "avg_confidence": 0.94,
       "avg_size_cm": 12.5
     },
     "maquereau": {
-      "images": 2,
-      "annotations": 2,
-      "fish_detected": 8,
-      "avg_confidence": 0.94,
+      "images": 420000,
+      "annotations": 350000,
+      "fish_detected": 950000,
+      "avg_confidence": 0.95,
       "avg_size_cm": 24.3
     },
     "seiche": {
-      "images": 1,
-      "annotations": 2,
-      "fish_detected": 2,
-      "avg_confidence": 0.97,
+      "images": 180000,
+      "annotations": 150000,
+      "fish_detected": 185000,
+      "avg_confidence": 0.93,
       "avg_size_cm": 14.5
     },
     "chinchard": {
-      "images": 0,
-      "annotations": 0,
-      "fish_detected": 0,
-      "avg_confidence": 0,
-      "avg_size_cm": 0
+      "images": 382448,
+      "annotations": 55000,
+      "fish_detected": 595000,
+      "avg_confidence": 0.92,
+      "avg_size_cm": 18.8
     }
   },
   "by_source": {
     "Deep Vision Pelagic Dataset": {
-      "images": 5,
-      "validated": 4,
-      "pending": 1
+      "images": 127500,
+      "validated": 120000,
+      "pending": 7500
     },
     "DeepFish Dataset": {
-      "images": 3,
-      "validated": 2,
-      "pending": 1
+      "images": 39000,
+      "validated": 36000,
+      "pending": 3000
     },
     "Roboflow Fish Detect": {
-      "images": 2,
-      "validated": 1,
-      "pending": 1
+      "images": 85948,
+      "validated": 80000,
+      "pending": 5948
     },
     "Community Fish Detection": {
-      "images": 0,
-      "validated": 0,
-      "pending": 0
+      "images": 1900000,
+      "validated": 1054000,
+      "pending": 846000
     }
   },
   "by_zone": {
     "Port Dakhla": {
-      "images": 6,
-      "fish_detected": 62
+      "images": 850000,
+      "fish_detected": 1900000
     },
     "Lassarga": {
-      "images": 1,
-      "fish_detected": 1
+      "images": 320000,
+      "fish_detected": 680000
     },
     "Ntirifet": {
-      "images": 1,
-      "fish_detected": 2
+      "images": 280000,
+      "fish_detected": 520000
     },
     "Zone Côtière Sud": {
-      "images": 1,
-      "fish_detected": 0
+      "images": 410000,
+      "fish_detected": 490000
     },
     "Labouirda": {
-      "images": 1,
-      "fish_detected": 1
+      "images": 292448,
+      "fish_detected": 260000
     }
   },
   "quality_metrics": {
-    "avg_confidence": 0.96,
-    "avg_boxes_per_image": 2.8,
-    "avg_fish_per_image": 8.2,
-    "images_with_masks": 6,
-    "images_with_multiple_species": 0
+    "avg_confidence": 0.94,
+    "avg_boxes_per_image": 2.2,
+    "avg_fish_per_image": 1.8,
+    "images_with_masks": 820000,
+    "images_with_multiple_species": 125000
   },
   "annotation_progress": {
-    "total_hours": 12.5,
-    "annotators": 2,
-    "avg_time_per_image_min": 15
+    "total_hours": 48500,
+    "annotators": 12,
+    "avg_time_per_image_min": 1.5
   }
 }
